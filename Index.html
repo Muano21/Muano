@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Passenger Counter App</title>
+   <style>
+     body {
+       background-color: burlywood;
+       background-size: cover;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-weight: bold;
+       text-align: center;
+       margin-top: 50px;
+     }
+     h1 {
+       margin-bottom: 10px;
+     }
+  h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  #increment-btn {
+    background: skyblue;
+    }
+    #save-btn {
+      background: red;
+    }
+  .ako {
+    background-color: firebrick;
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+   </style>
+   </head>
+     <body>
+       <div class="ako">
+       <h1>Vhathu Vho Dzhena ho</h1>
+       <h2 id="count-el">0</h2>
+       <button id="increment-btn" onclick="increment()">UTHOMA</button>
+       <button id="save-btn" onclick="save()">SAVE</button>
+       <p id="save-el">hono dzhena vhangana:</p>
+       </div>
+       <script>
+      let count = 0;
+      let countEl = document.getElementById("count-el");
+      let saveEl = document.getElementById("save-el");
+      
+    function increment() {
+      count += 1;
+      countEl.innerText = count;
+    }
+    function save() {
+      countStr = count+ "-";
+      saveEl.textContent += countStr;
+    }
+       </script>
+     </body>
+     </html>
