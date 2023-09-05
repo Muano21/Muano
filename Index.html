@@ -1,66 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Passenger Counter App</title>
-   <style>
-     body {
-       background-color: burlywood;
-       background-size: cover;
-       font-family: Verdana, Geneva, Tahoma, sans-serif;
-       font-weight: bold;
-       text-align: center;
-       margin-top: 50px;
-     }
-     h1 {
-       margin-bottom: 10px;
-     }
-  h2 {
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-  button {
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: bold;
-    width: 200px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    color: white;
-  }
-  #increment-btn {
-    background: skyblue;
+<html>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logo</title>
+  <style>
+  body {
+      background-color: white;
+      background-position: relative;
+      align-items: position;
+      justify-content: position;
+      height: 100vh;
+      width: 100vh;
+      display: absolute;
+      background: #081b29 ;
+      overflow: hidden;
     }
-    #save-btn {
-      background: red;
-    }
-  
-   </style>
-   </head>
-     <body>
-       <div class="ako">
-       <h1>Vhathu Vho Dzhena ho</h1>
-       <h2 id="count-el">0</h2>
-       <button id="increment-btn" onclick="increment()">UTHOMA</button>
-       <button id="save-btn" onclick="save()">SAVE</button>
-       <p id="save-el">hono dzhena vhangana:</p>
-       </div>
-       <script>
-      let count = 0;
-      let countEl = document.getElementById("count-el");
-      let saveEl = document.getElementById("save-el");
+.youtube-logo {
+background-color: firebrick;
+ width: 300px;
+ height: 200px;
+border-radius: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 50px;
+}
+
+.play-button { 
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid white;
+}
+
+input {
+   height: 30px;
+       width: 200px;
+       border: 1px solid #333;
+       transition: all 0.4s ease;
+       margin: 60px;
+      padding-right: 80px;
+      color: black;
       
-    function increment() {
-      count += 1;
-      countEl.innerText = count;
-    }
-    function save() {
-      countStr = count+ "-";
-      saveEl.textContent += countStr;
-    }
+}
+
+h1 {
+  margin: 30px;
+  color: white;
+  font-weight: 600;
+}
+</style>
+  <body>
+    <h1>Change YouTube Color</h1>
+    <div class="youtube-logo">
+      <div class="play-button"></div>
+      </div>
+      <input type="text" />
+      
+    
+  <script>
+         let box = document.querySelector("div"),
+         input = document.querySelector("input");
+         
+         input.addEventListener("input", () => {
+           box.style.borderRadius = input.value;
+           box.style.background = input.value;
+         })
+         
        </script>
-     </body>
-     </html>
+  </body>
+  
+</html>
+
+
